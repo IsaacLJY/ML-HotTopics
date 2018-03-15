@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/ML-HotPoints.iml" filepath="$PROJECT_DIR$/.idea/ML-HotPoints.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/ML-HotTopics.iml" filepath="$PROJECT_DIR$/.idea/ML-HotTopics.iml" />
     </modules>
   </component>
 </project>

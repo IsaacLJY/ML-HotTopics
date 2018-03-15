@@ -4,6 +4,7 @@ from urllib import error
 import gzip
 from bs4 import BeautifulSoup
 
+# search conference paper titles and find topic words
 def search(conf, year, words):
     if os.path.exists("./data/"+conf+year+".html"):
         fread = open("./data/"+conf+year+".html", 'r')
@@ -47,6 +48,7 @@ def search(conf, year, words):
                 times[word] = times[word] + title.count(word)
     return times
 
+# write the consequece into file
 def search_write(confs, conf_class,  file):
     file.write("ML conference class " + conf_class + "\n")
     for year in range(2017, 2012, -1):
@@ -64,6 +66,7 @@ def search_write(confs, conf_class,  file):
                 file.write(year + "," + conf + "," + times + "\n")
             print(conf_class + ": " + conf + year + " complete.")
 
+# write the header of csv file
 def write_header(words, file):
     header = ",,total"
     for word in words:
@@ -78,8 +81,10 @@ confc = ["accv", "conll", "gecco", "ictai", "alt", "icann", "fgr", "icdar", "ilp
 if os.path.exists("MLhot.csv"):
     os.remove("MLhot.csv")
 f = open("MLhot.csv", 'a')
+
 write_header(words, f)
 search_write(confa, "A", f)
 search_write(confb, "B", f)
 search_write(confc, "C", f)
+
 f.close()
