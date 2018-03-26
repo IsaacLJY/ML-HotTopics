@@ -73,7 +73,7 @@ def write_header(words, file):
         header = header + "," + word
     file.write(header + "\n")
 
-words = [ "adversarial", "cluster", "kernel"]
+words = [ "adversarial", "cluster", "kernel", "traffic"]
 confa = ["aaai", "cvpr", "iccv", "icml", "ijcai", "nips", "acl"]
 confb = ["colt", "emnlp", "ecai", "eccv", "icra", "aips", "iccbr", "coling", "kr", "uai", "atal", "ppsn"]
 confc = ["accv", "conll", "gecco", "ictai", "alt", "icann", "fgr", "icdar", "ilp", "ksem", "iconip", "icpr", "icb", "ijcnn", "pricai", "naacl", "bmvc", "iros", "aistats", "acml"]
